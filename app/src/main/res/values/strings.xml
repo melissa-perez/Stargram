@@ -3,4 +3,6 @@
     <string name="stargram_username_login_text">username</string>
     <string name="stargram_password_login_text">password</string>
     <string name="login_btn_text">Login</string>
+    <string name="signup_btn_txt">Signup</string>
+
 </resources>

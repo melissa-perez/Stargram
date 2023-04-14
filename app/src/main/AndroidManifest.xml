@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.codepath.stargram">
+    <uses-permission android:name="android.permission.ACCEPT_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".StargramApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -23,6 +26,15 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="${SERVER_URL}" />
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="${APP_ID}" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value= "${CLIENT_KEY}"/>
     </application>
 
 </manifest>

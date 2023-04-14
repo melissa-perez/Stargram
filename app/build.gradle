@@ -3,6 +3,10 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 
+def parsePropertiesFile = rootProject.file("parse.properties")
+def parseProperties = new Properties()
+parseProperties.load(new FileInputStream(parsePropertiesFile))
+
 android {
     namespace 'com.codepath.stargram'
     compileSdk 33
@@ -15,6 +19,15 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "API_ID", parseProperties['back4app_app_id'])
+        buildConfigField("String", "CLIENT_KEY", parseProperties['back4app_client_key'])
+        buildConfigField("String", "SERVER_URL", parseProperties['back4app_server_url'])
+        manifestPlaceholders = [
+                APP_ID: parseProperties['back4app_app_id'],
+                CLIENT_KEY: parseProperties['back4app_client_key'],
+                SERVER_URL:parseProperties['back4app_server_url']
+        ]
     }
 
     buildTypes {
@@ -30,6 +43,8 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    namespace 'com.codepath.stargram'
+
 }
 
 dependencies {
@@ -38,6 +53,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'com.github.parse-community:Parse-SDK-Android:4.2.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
