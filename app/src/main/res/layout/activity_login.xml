@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <EditText
+        android:id="@+id/stargram_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:minHeight="@dimen/et_rec_height"
+        android:minWidth="@dimen/et_rec_width"
+        android:inputType="textPersonName"
+        android:text="@string/stargram_username_login_text"
+        android:autofillHints="no"
+        android:labelFor="@+id/stargram_username"
+        app:layout_constraintBottom_toTopOf="@+id/stargram_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/stargram_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="62dp"
+        android:autofillHints="no"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:labelFor="@+id/stargram_password"
+        android:minWidth="@dimen/et_rec_width"
+        android:minHeight="@dimen/et_rec_height"
+        android:text="@string/stargram_password_login_text"
+        app:layout_constraintBottom_toTopOf="@+id/login_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stargram_username" />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="62dp"
+        android:layout_marginBottom="351dp"
+        android:text="@string/login_btn_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/stargram_password" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="stargram_username_login_text">username</string>
+    <string name="stargram_password_login_text">password</string>
+</resources>
