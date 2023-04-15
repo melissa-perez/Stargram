@@ -2,10 +2,11 @@ package com.codepath.stargram
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-import com.parse.FindCallback
-import com.parse.ParseException
 import com.parse.ParseQuery
+import com.parse.ParseUser
 
 /**
  * Let user create a post by taking a photo with their camera
@@ -22,7 +23,37 @@ class MainActivity : AppCompatActivity() {
         //3. an imageview to show picture user has taken
         //4. a button to save and send the post to parse
 
-        queryPosts()
+        findViewById<Button>(R.id.save_button).setOnClickListener {
+            // send post to server without an image first
+            val description = findViewById<EditText>(R.id.photo_comment_et).text.toString()
+            val user = ParseUser.getCurrentUser()
+            submitPost(description, user)
+        }
+
+        findViewById<Button>(R.id.take_picture_button).setOnClickListener {
+
+        }
+
+
+        // queryPosts()
+    }
+
+    private fun submitPost(description: String, user: ParseUser) {
+        // Create Post object
+        val post = Post()
+        post.setDescription(description)
+        post.setUser(user)
+        post.saveInBackground { e ->
+            if (e != null) {
+                Log.e(tag, "error while saving post")
+                e.printStackTrace()
+                // TODO: show toast
+            } else {
+                Log.i(tag, "Successfully saved post")
+                // TODO: reset editextfield to empty
+                // TODO: reset the image view to empty
+            }
+        }
     }
 
     // query for all posts in server

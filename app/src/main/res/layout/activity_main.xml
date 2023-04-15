@@ -67,7 +67,7 @@
         app:layout_constraintTop_toBottomOf="@+id/photo_to_upload" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/take_picture_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="103dp"
