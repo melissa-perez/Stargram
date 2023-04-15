@@ -8,12 +8,12 @@ Time spent: **X** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] User can sign up to create a new account using Parse authentication.
+- [x] User can sign up to create a new account using Parse authentication.
 - [ ] User can log in and log out of his or her account.
-- [ ] The current signed in user is persisted across app restarts.
-- [ ] User can take a photo, add a caption, and post it to "Instagram".
+- [x] The current signed in user is persisted across app restarts.
+- [x] User can take a photo, add a caption, and post it to "Instagram".
 - [ ] User can view the last 20 posts submitted to "Instagram".
-- [ ] The user should switch between different tabs - viewing all posts (feed view), compose (capture photos form camera) and profile tabs (posts made) using fragments and a Bottom Navigation View. (2 points)
+- [ ] The user should switch between different tabs - viewing all posts (feed view), compose (capture photos form camera) and profile tabs (posts made) using fragments and a Bottom Navigation View. 
 - [ ] User can pull to refresh the last 20 posts submitted to "Instagram".
 
 The following **optional** features are implemented:
@@ -26,12 +26,9 @@ The following **optional** features are implemented:
 - [ ] User can load more posts once he or she reaches the bottom of the feed using infinite scrolling.
 - [ ] Show the username and creation time for each post.
 - [ ] User can tap a post to view post details, including timestamp and caption.
-- [ ] User Profiles
-      
-      1. [ ] Allow the logged in user to add a profile photo
-      2. [ ] Display the profile photo with each post
-      3. [ ] Tapping on a post's username or profile photo goes to that user's profile page and shows a grid view of the user's posts 
-           
+- [ ] Allow the logged in user to add a profile photo
+- [ ] Display the profile photo with each post
+- [ ] Tapping on a post's username or profile photo goes to that user's profile page and shows a grid view of the user's posts        
 - [ ] User can comment on a post and see all comments for each post in the post details screen.
 - [ ] User can like a post and see number of likes for each post in the post details screen.
 
