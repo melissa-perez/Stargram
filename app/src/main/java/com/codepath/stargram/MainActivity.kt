@@ -17,6 +17,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //1. setting the description of post
+        //2. a button to launch the camera
+        //3. an imageview to show picture user has taken
+        //4. a button to save and send the post to parse
+
         queryPosts()
     }
 
@@ -26,23 +31,20 @@ class MainActivity : AppCompatActivity() {
         // give us the user associated with post
         query.include(Post.KEY_USER)
         // find all posts in parse
-        query.findInBackground(object : FindCallback<Post> {
-            override fun done(posts: MutableList<Post>?, e: ParseException?) {
-                if (e != null) {
-                    Log.i(tag, "ERROR fetching posts")
-                } else {
-                    if (posts != null) {
-                        for (post in posts) {
-                            Log.i(
-                                tag,
-                                "POST: ${post.getDescription()}, USER: ${post.getUser()?.username}"
-                            )
-                        }
+        query.findInBackground { posts, e ->
+            if (e != null) {
+                Log.i(tag, "ERROR fetching posts")
+            } else {
+                if (posts != null) {
+                    for (post in posts) {
+                        Log.i(
+                            tag,
+                            "POST: ${post.getDescription()}, USER: ${post.getUser()?.username}"
+                        )
                     }
                 }
             }
-
-        })
+        }
     }
 
 }

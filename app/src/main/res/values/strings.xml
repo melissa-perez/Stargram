@@ -4,5 +4,10 @@
     <string name="stargram_password_login_text">password</string>
     <string name="login_btn_text">Login</string>
     <string name="signup_btn_txt">Signup</string>
+    <string name="photo_comment_text">Photo comment</string>
+    <string name="photo_comment_hint_text">Photo comment here</string>
+    <string name="upload_image_cd">Image that will be uploaded</string>
+    <string name="save_btn_text">Save</string>
+    <string name="take_picture_text">Take picture</string>
 
 </resources>

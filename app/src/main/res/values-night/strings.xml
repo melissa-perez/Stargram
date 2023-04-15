@@ -2,4 +2,8 @@
 <resources>
     <string name="stargram_username_login_text">username</string>
     <string name="stargram_password_login_text">password</string>
+    <string name="photo_comment_text">Photo comment</string>
+    <string name="photo_comment_hint_text">Photo comment here</string>
+    <string name="upload_image_cd">Image that will be uploaded</string>
+    <string name="save_btn_text">Save</string>
 </resources>
