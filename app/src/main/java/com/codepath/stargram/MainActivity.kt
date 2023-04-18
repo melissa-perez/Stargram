@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.parse.ParseFile
 import com.parse.ParseQuery
 import com.parse.ParseUser
@@ -57,7 +58,22 @@ class MainActivity : AppCompatActivity() {
             onLaunchCamera()
         }
 
+        findViewById<BottomNavigationView>(R.id.bottom_navigation).setOnItemSelectedListener {
+        item ->
+            when(item.itemId){
+                R.id.item_home -> {
+                    //TODO: navigate to home
+                }
+                R.id.item_compose -> {
+                    //TODO: navigate to compose
 
+                }
+                R.id.item_profile -> {
+                    //TODO: navigate to profile
+                }
+            }
+            true
+        }
         // queryPosts()
     }
 
