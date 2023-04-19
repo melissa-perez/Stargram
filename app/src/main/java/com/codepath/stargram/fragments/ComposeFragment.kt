@@ -79,7 +79,11 @@ class ComposeFragment : Fragment() {
 
     }
 
-    companion object
+    companion object{
+        fun newInstance(): ComposeFragment {
+            return ComposeFragment()
+        }
+    }
 
     fun onLaunchCamera() {
         // create Intent to take a picture and return control to the calling application
